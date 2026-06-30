@@ -16,5 +16,16 @@ void main(){
     studentScores["Network"] = 100;
     print("Update studentScores: ${studentScores}");
 
-
+    print("------วิชาที่มี  a  เป็นส่วนประกอบ-------");
+    studentScores.forEach((subject, score) {
+      if (subject.toLowerCase().contains('a')) {
+        print("$subject: $score คะแนน");
+      }
+    });
+    print("------วิชาที่มากกว่า 50 คะแนน-------");
+    studentScores.forEach((subject, score) {
+      if (score > 50) {
+        print("$subject: $score คะแนน");
+      }
+    });
 }
