@@ -1,31 +1,37 @@
+void printGrade(int score){
+  print("score: ${score}");
+  String? grade;
+  if (score>=80){
+    grade = 'A';
+  }
+  else if(score >=70){
+    grade = 'B';
+  }
+  else if(score >=60){
+    grade = 'C';
+  }
+  else if(score>=50){
+    grade = 'D';
+  }
+  else{
+    grade = 'F';
+  }
+  print("Grade : ${grade}");
+  print("-----");
+}
 void main(){
-    List<String> subjects = ["math","sci","computer"];
-    print("Number of Subject${subjects.length}");
-    print("First subject:${subjects[0]}");
-    print("Last subject:${subjects.length-1}");
-    
-    subjects.add("Network");
-    print("Update subjects:${subjects}");
-
-    Map<String,int> studentScores = {
-      "math" :100,
-      "computer":100
-    };
-    print("score for computer : ${studentScores["computer"]}");
-
-    studentScores["Network"] = 100;
-    print("Update studentScores: ${studentScores}");
-
-    print("------วิชาที่มี  a  เป็นส่วนประกอบ-------");
-    studentScores.forEach((subject, score) {
-      if (subject.toLowerCase().contains('a')) {
-        print("$subject: $score คะแนน");
-      }
-    });
-    print("------วิชาที่มากกว่า 50 คะแนน-------");
-    studentScores.forEach((subject, score) {
-      if (score > 50) {
-        print("$subject: $score คะแนน");
-      }
-    });
+  printGrade(85);
+  printGrade(72);
+  printGrade(50);
+  printGrade(40);
+  print("number 1 to 10");
+  for (int i=1; i<=10; i++){
+    print(i);
+  }
+  print("------");
+   var fruits = ['Apple', 'Banana', 'Cherry'];
+  print('Fruits:');
+  for (var fruit in fruits) {
+    print('- $fruit');
+  }
 }
