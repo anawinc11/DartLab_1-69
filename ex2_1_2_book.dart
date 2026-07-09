@@ -4,9 +4,7 @@ class Temperature {
   Temperature(double initialCelsius) {
     celsius = initialCelsius;
   }
-
   double get celsius => _celsius;
-
   set celsius(double value) {
     if (value < -273.15) {
       print("invalid celcies dont under -273.15");
@@ -16,7 +14,6 @@ class Temperature {
   }
   double get fahrenheit => (_celsius * 9 / 5) + 32;
 }
-
 void main() {
 
   var roomTemp = Temperature(25.0);
