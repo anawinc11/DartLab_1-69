@@ -21,7 +21,6 @@ void main() async {
     print("Finally block executed Case 1 completed");
   }
 
-
   print("--- Test Case 2: Invalid User ID ---");
   try {
     Map<String, dynamic> profile = await fetchProfile(0);
